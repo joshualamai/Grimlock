@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Cracker Game</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <h1>Password Cracker Game</h1>
+
+    <!-- Level Info -->
+    <div id="level-info">
+        <p>Current Level: <span id="current-level">1</span></p>
+        <p>Attempts Left: <span id="attempts-left">3</span></p>
+    </div>
+
+    <!-- Password Section -->
+    <div id="password-section">
+        <h2>Enter Password</h2>
+        <input type="text" id="password-input" placeholder="Enter your password">
+        <button onclick="verifyPassword()">Submit</button>
+    </div>
+
+    <!-- Scrambled Password Section -->
+    <div id="scrambled-password-section" style="display: none;">
+        <h2>Scrambled Password Challenge</h2>
+        <p>The scrambled password is: <span id="scrambled-password"></span></p>
+        <input type="text" id="scrambled-input" placeholder="Unscramble the password">
+        <button onclick="checkScrambledPassword()">Submit</button>
+    </div>
+
+    <!-- OTP Section -->
+    <div id="otp-section" style="display: none;">
+        <h2>Two-Factor Authentication</h2>
+        <p>Your OTP is: <span id="generated-otp"></span></p>
+        <input type="text" id="otp-input" placeholder="Enter OTP">
+        <button onclick="verifyOTP()">Submit</button>
+        <p>Time left: <span id="timer">30</span> seconds</p>
+    </div>
+
+    <!-- Message Section -->
+    <div id="message"></div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
